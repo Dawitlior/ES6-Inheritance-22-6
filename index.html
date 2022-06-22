@@ -10,19 +10,22 @@
   <body>
     <h1>Welcome,</h1>
     <h2>Please Enter A Car</h2>
-    <form id="form">
-      <label for="">Please Enter Your favorite Color:</label>
-      <input id="put1" type="text" />
-      <label for="">Please Enter Favorite engineCapacity:</label>
-      <input id="put2" type="number" />
-      <label for="">Please Enter Number Wheels:</label>
-      <input id="put3" type="number" />
-    </form>
-    <button id="btn"onclick="sendTheForm()">Send</button>
-    <table>
-        <thead><tr id="tr_head"></tr></thead>
-        <tbody><tr id="tr_body"></tr></tbody>
-    </table>
+
+    <label for="put1">Enter numbers-Wheels:</label>
+    <input placeholder="Enter numbersWheels" id="put1" type="text" />
+    <label for="put2">Enter engine-Capacity:</label>
+    <input placeholder="Enter engine-Capacity" id="put2" type="text" />
+    <label for="put3">Enter Color:</label>
+    <input placeholder="Enter color" id="put3" type="text" />
+
+    <select id="select">
+      <option id="MainCar" value="MainCar">MainCar</option>
+      <option id="SportCar" value="SportCar">SportCar</option>
+      <option id="Jeep" value="Jeep">Jeep</option>
+      <option id="Buss" value="Buss">Buss</option>
+    </select>
+    
+    <button id="btn" onclick="sendTheForm()">Send</button>
     <script src="main.js"></script>
   </body>
 </html>

@@ -1,12 +1,8 @@
 body{
     background-color: blanchedalmond;
-}
-#form{
     display: flex;
     flex-direction: column;
-    float: left;
+    align-items: center;
+    
 }
-#btn{
-    display: flex;
-    float: left;    
-}
+    
