@@ -88,7 +88,6 @@ class Buss extends MainCar {
   printDetails() {
     return `${this.printDetails}:${this.name}`;
   }
-
   firstAndLastNameToUpperCase() {
     let stringCatch =
       this.name.charAt(0).toUpperCase() +
