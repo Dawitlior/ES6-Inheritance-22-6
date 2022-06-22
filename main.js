@@ -31,7 +31,7 @@ class MainCar {
   }
   printDetails() {
     let paragraph = document.getElementById("myP");
-    return (paragraph.innerHTML = `numbers-Wheels:${this.numbersWheels}engine-Capacity:${this.engineCapacity}color:${this.color}`);
+    return paragraph.innerHTML = `numbers-Wheels:${this.numbersWheels}engine-Capacity:${this.engineCapacity}color:${this.color}`;
   }
 }
 
@@ -41,7 +41,7 @@ class SportCar extends MainCar {
     this.name = name;
   }
   printDetails() {
-    return `${this.printDetails()}:${this.name}`;
+    return `${this.printDetails}:${this.name}`;
   }
 }
 
@@ -51,9 +51,11 @@ class Car2 extends MainCar {
     this.name = name;
   }
   printDetails() {
-    return `${this.printDetails()}:${this.name}`;
+    return `${this.printDetails}:${this.name}`;
   }
 }
+const someName1 = new Car2(4, 1800, "green", "lior");
+console.log(someName1.printDetails());
 
 class Car3 extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
@@ -61,7 +63,7 @@ class Car3 extends MainCar {
     this.name = name;
   }
   printDetails() {
-    return `${this.printDetails()}:${this.name}`;
+    return `${this.printDetails}:${this.name}`;
   }
   
   firstAndLastNameToUpperCase() {
@@ -76,5 +78,6 @@ class Car3 extends MainCar {
   }
   
 }
+
 const someName = new Car3(12,1600,"black","toyota");
 console.log(someName.getTheResult());
