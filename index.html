@@ -11,14 +11,18 @@
     <h1>Welcome,</h1>
     <h2>Please Enter A Car</h2>
     <form id="form">
-      <label for="">Please Enter Your Name:</label>
-      <input type="text" />
-      <label for="">Please Enter Favorite Color:</label>
-      <input type="text" />
-      <label for="">Please Enter Favorite Engine-Capacity:</label>
-      <input type="text" />
+      <label for="">Please Enter Your favorite Color:</label>
+      <input id="put1" type="text" />
+      <label for="">Please Enter Favorite engineCapacity:</label>
+      <input id="put2" type="number" />
+      <label for="">Please Enter Number Wheels:</label>
+      <input id="put3" type="number" />
     </form>
     <button id="btn"onclick="sendTheForm()">Send</button>
+    <table>
+        <thead><tr id="tr_head"></tr></thead>
+        <tbody><tr id="tr_body"></tr></tbody>
+    </table>
     <script src="main.js"></script>
   </body>
 </html>

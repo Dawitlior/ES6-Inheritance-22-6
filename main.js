@@ -23,6 +23,9 @@
 //------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------
 
+let someItem1 = 0;
+let someItem2 = 0;
+
 class MainCar {
   constructor(numbersWheels, engineCapacity, color) {
     this.numbersWheels = numbersWheels;
@@ -32,17 +35,28 @@ class MainCar {
   printDetails() {
     return `numbersWheels:${this.numbersWheels}engineCapacity:${this.engineCapacity}color:${this.color}`;
   }
-  static getMaxEngine(carsArr) {
-    let maxEngine = carsArr[0];
-    console.log(maxEngine);
-    carsArr.forEach((car) => {
-      if (car.engineCapacity > maxEngine.engineCapacity) {
-        maxEngine = car;
-      }
+  static getMaxEngine(car1, car2) {
+    car1.forEach((item) => {
+      someItem1 = item.engineCapacity;
+      return someItem1;
     });
-    return maxEngine;
+
+    car2.forEach((element) => {
+      someItem2 = element.engineCapacity;
+      return someItem2;
+    });
+    if (someItem1 > someItem2) {
+      return someItem1;
+    } else {
+      return someItem2;
+    }
   }
 }
+const firstShow1 = new MainCar(4, 1600, "black");
+const firstShow2 = new MainCar(8, 2500, "red");
+const arrayCar1 = [firstShow1];
+const arrayCar2 = [firstShow2];
+MainCar.getMaxEngine(arrayCar1, arrayCar2);
 
 class SportCar extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
@@ -87,14 +101,9 @@ class Buss extends MainCar {
   }
 }
 
-const someName = new Buss(12, 1600, "black", "toyota");
-const myArray = [myArray2, myArray2, someName];
-const myArray2 = new Buss(busShow, engineCapacity, color);
-console.log(MainCar.getMaxEngine(someName,myArray,myArray2));
-
-
 let fail;
-function sendTheForm(){
-fail = new MainCar(someName1, someName,);
+function sendTheForm() {
+  fail = new MainCar(put1.value, put2.value, put3.value);
+  tr_head.innerHTML += `<td>${fail.color}</td><td>${fail.engineCapacity}</td>${fail.numbersWheels}</td>`
+  console.log(fail);
 }
-// console.log(someName.getTheResult());
