@@ -30,10 +30,13 @@ class MainCar {
     this.color = color;
   }
   printDetails() {
-    let paragraph = document.getElementById("myP");
-    return paragraph.innerHTML = `numbers-Wheels:${this.numbersWheels}engine-Capacity:${this.engineCapacity}color:${this.color}`;
+    return `${this.numbersWheels}:${this.engineCapacity}:${this.color}`;
   }
+  static getObjAndReturnTheHighEngine(obj1,obj2){
+  
 }
+
+
 
 class SportCar extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
@@ -51,10 +54,10 @@ class Car2 extends MainCar {
     this.name = name;
   }
   printDetails() {
-    return `${this.printDetails}:${this.name}`;
+    return `${this.printDetails}${this.name}`;
   }
 }
-const someName1 = new Car2(4, 1800, "green", "lior");
+const someName1 = new Car2(4, 1800, "green", "SSSSiDFor");
 console.log(someName1.printDetails());
 
 class Car3 extends MainCar {
@@ -80,4 +83,4 @@ class Car3 extends MainCar {
 }
 
 const someName = new Car3(12,1600,"black","toyota");
-console.log(someName.getTheResult());
+// console.log(someName.getTheResult());
