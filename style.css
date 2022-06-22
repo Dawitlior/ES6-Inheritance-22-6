@@ -1,0 +1,12 @@
+body{
+    background-color: blanchedalmond;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+#btn{
+    display: flex;
+    float: left;    
+}

@@ -30,13 +30,19 @@ class MainCar {
     this.color = color;
   }
   printDetails() {
-    return `${this.numbersWheels}:${this.engineCapacity}:${this.color}`;
+    return `numbersWheels:${this.numbersWheels}engineCapacity:${this.engineCapacity}color:${this.color}`;
   }
-  static getObjAndReturnTheHighEngine(obj1,obj2){
-  
+  static getMaxEngine(carsArr) {
+    let maxEngine = carsArr[0];
+    console.log(maxEngine);
+    carsArr.forEach((car) => {
+      if (car.engineCapacity > maxEngine.engineCapacity) {
+        maxEngine = car;
+      }
+    });
+    return maxEngine;
+  }
 }
-
-
 
 class SportCar extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
@@ -48,7 +54,7 @@ class SportCar extends MainCar {
   }
 }
 
-class Car2 extends MainCar {
+class Jeep extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
     super(numbersWheels, engineCapacity, color);
     this.name = name;
@@ -57,10 +63,10 @@ class Car2 extends MainCar {
     return `${this.printDetails}${this.name}`;
   }
 }
-const someName1 = new Car2(4, 1800, "green", "SSSSiDFor");
+const someName1 = new Jeep(4, 1800, "green", "SSSSiDFor");
 console.log(someName1.printDetails());
 
-class Car3 extends MainCar {
+class Buss extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
     super(numbersWheels, engineCapacity, color);
     this.name = name;
@@ -68,19 +74,27 @@ class Car3 extends MainCar {
   printDetails() {
     return `${this.printDetails}:${this.name}`;
   }
-  
+
   firstAndLastNameToUpperCase() {
     let stringCatch =
-    this.name.charAt(0).toUpperCase() +
-    this.name.slice(1, this.name.length - 1) +
-    this.name.charAt(this.name.length - 1).toUpperCase();
+      this.name.charAt(0).toUpperCase() +
+      this.name.slice(1, this.name.length - 1) +
+      this.name.charAt(this.name.length - 1).toUpperCase();
     return stringCatch;
   }
-  getTheResult(){
+  get TheResult() {
     return this.firstAndLastNameToUpperCase();
   }
-  
 }
 
-const someName = new Car3(12,1600,"black","toyota");
+const someName = new Buss(12, 1600, "black", "toyota");
+const myArray = [myArray2, myArray2, someName];
+const myArray2 = new Buss(busShow, engineCapacity, color);
+console.log(MainCar.getMaxEngine(someName,myArray,myArray2));
+
+
+let fail;
+function sendTheForm(){
+fail = new MainCar(someName1, someName,);
+}
 // console.log(someName.getTheResult());
