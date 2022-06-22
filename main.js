@@ -30,49 +30,51 @@ class MainCar {
     this.color = color;
   }
   printDetails() {
-    document.getElementById(
-      "myP"
-    ).innerText = `numbers-Wheels:${this.numbersWheels}engine-Capacity:${this.engineCapacity}color:${this.color}`;
+    let paragraph = document.getElementById("myP");
+    return (paragraph.innerHTML = `numbers-Wheels:${this.numbersWheels}engine-Capacity:${this.engineCapacity}color:${this.color}`);
   }
 }
+
 class SportCar extends MainCar {
   constructor(numbersWheels, engineCapacity, color, name) {
     super(numbersWheels, engineCapacity, color);
     this.name = name;
-    this.getDetails;
   }
-  getDetails1() {
-    return super.printDetails();
-  }
-  madeTheNameUpperCase() {
-    for (const key in SportCar) {
-      if (SportCar.name == SportCar.name.toLowerCase) {
-        const element = object[key];
-      }
-    }
+  printDetails() {
+    return `${this.printDetails()}:${this.name}`;
   }
 }
-const lior = new SportCar(4,1600,"black","daniel");
-console.log(lior);
 
 class Car2 extends MainCar {
-  constructor(numbersWheels, engineCapacity, color, name, size) {
-    super(numbersWheels, engineCapacity, color, name);
-    this.size = size;
-    getDetails();
+  constructor(numbersWheels, engineCapacity, color, name) {
+    super(numbersWheels, engineCapacity, color);
+    this.name = name;
   }
-  getDetails1() {
-    return super.printDetails();
+  printDetails() {
+    return `${this.printDetails()}:${this.name}`;
   }
 }
 
 class Car3 extends MainCar {
-  constructor(numbersWheels, engineCapacity, color, name, size, country) {
-    super(numbersWheels, engineCapacity, color, name, size);
-    this.country = country;
-    getDetails();
+  constructor(numbersWheels, engineCapacity, color, name) {
+    super(numbersWheels, engineCapacity, color);
+    this.name = name;
   }
-  getDetails1() {
-    return super.printDetails();
+  printDetails() {
+    return `${this.printDetails()}:${this.name}`;
   }
+  
+  firstAndLastNameToUpperCase() {
+    let stringCatch =
+    this.name.charAt(0).toUpperCase() +
+    this.name.slice(1, this.name.length - 1) +
+    this.name.charAt(this.name.length - 1).toUpperCase();
+    return stringCatch;
+  }
+  getTheResult(){
+    return this.firstAndLastNameToUpperCase();
+  }
+  
 }
+const someName = new Car3(12,1600,"black","toyota");
+console.log(someName.getTheResult());
