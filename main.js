@@ -33,7 +33,7 @@ class MainCar {
     this.color = color;
   }
   printDetails() {
-    return `numbersWheels:${this.numbersWheels}engineCapacity:${this.engineCapacity}color:${this.color}`;
+    return `numbersWheels:${this.numbersWheels},engineCapacity:${this.engineCapacity},color:${this.color}`;
   }
   static getMaxEngine(car1, car2) {
     car1.forEach((item) => {
