@@ -64,7 +64,7 @@ class SportCar extends MainCar {
     this.name = name;
   }
   printDetails() {
-    return `${this.printDetails}:${this.name}`;
+    return `Name car:${this.name}`;
   }
 }
 
