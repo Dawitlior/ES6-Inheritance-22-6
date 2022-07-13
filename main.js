@@ -46,7 +46,8 @@ class MainCar {
     });
     if (someItem1 > someItem2) {
       return someItem1;
-    } else {
+    } 
+    else {
       return someItem2;
     }
   }
@@ -73,7 +74,7 @@ class Jeep extends MainCar {
     this.name = name;
   }
   printDetails() {
-    return `${this.printDetails}${this.name}`;
+    return `${this.name}`;
   }
 }
 const someName1 = new Jeep(4, 1800, "green", "SSSSiDFor");
