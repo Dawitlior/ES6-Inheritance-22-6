@@ -19,7 +19,7 @@ console.log(Teacher.counter);
 const teacher1 = new Teacher("lior dawit", 25, 2000);
 const teacher2 = new Teacher("yaso mlako", 26, 2300);
 console.log(Teacher.counter);
-printOlderTeacher(teacher1, teacher2);
+console.log(printOlderTeacher());
 // ------------------------------------------------------------------------------------------------
 
 let someItem1 = 0;
